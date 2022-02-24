@@ -13,7 +13,7 @@ class Book {
 
 // adding books to websites data
 function ShowBook() {
-  console.log("running show book");
+  //console.log("running show book");
   let local_data = localStorage.getItem("Entry");
   let t_body = document.getElementById("tableBody");
   let uistring = "";
@@ -48,7 +48,7 @@ function ShowBook() {
 
 //fuction to create return book entry
 function return_book(index) {
-  console.log("deleting an book of index", index);
+ // console.log("deleting an book of index", index);
   let bookObj;
   let local_data = localStorage.getItem("Entry");
   if (local_data == null) {
