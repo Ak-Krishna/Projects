@@ -82,7 +82,7 @@ function search_Book(value) {
 class Display {
   // checking validation given data is validate or not
   validate_form(book) {
-    if (book.name == "" && book.auther == "") {
+    if (book.name.length<2 || book.auther.length<2 || book.book_name.length<2) {
       return false;
     } else {
       return true;
@@ -106,7 +106,7 @@ class Display {
                           </div>`;
     setTimeout(() => {
       message.innerHTML = "";
-    }, 3000);
+    }, 4000);
   }
 }
 
@@ -157,9 +157,9 @@ addbtn.addEventListener("click", function (e) {
     // running showbook function
     ShowBook();
     // showing message to inserting successfully data
-    display.msg("success", `your book entry is added successfully !`);
+    display.msg("success ! ", `your book entry is added successfully !`);
   } else {
-    display.msg("danger", `something wents wrong check your book entry`);
+    display.msg("danger ", ` Book entry failed check your input field `);
   }
   display.reset_form();
 });
