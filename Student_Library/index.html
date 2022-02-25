@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,8 +27,8 @@
 
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search"
-                    aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                    oninput="search_Book(this.value)">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchTxt">Search</button>
             </form>
         </div>
@@ -66,18 +67,18 @@
                             <input class="form-check-input" type="radio" name="type" id="Bussiness" value="Bussiness"
                                 checked>
                             <label class="form-check-label" for="fiction">
-                               Bussiness Motivational
+                                Bussiness Motivational
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="type" id="Biography"
-                                value="Biography">
+                            <input class="form-check-input" type="radio" name="type" id="Biography" value="Biography">
                             <label class="form-check-label" for="Biography">
                                 Biography
                             </label>
                         </div>
                         <div class="form-check disabled">
-                            <input class="form-check-input" type="radio" name="type" id="self_mot" value="Self Motivation">
+                            <input class="form-check-input" type="radio" name="type" id="self_mot"
+                                value="Self Motivation">
                             <label class="form-check-label" for="self">
                                 Self Motivational
                             </label>
@@ -92,7 +93,7 @@
                 </div>
             </div>
         </form>
-         <hr>
+        <hr>
         <div id="table">
             <h1>Your books</h1>
 

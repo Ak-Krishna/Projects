@@ -27,7 +27,7 @@ function ShowBook() {
     uistring += `<tr class="Student_data">
                    <td>${index + 1}</td>
                    <td>${element.name}</td>
-                   <td>${element.book_name}</td>
+                   <td class="searchBookName">${element.book_name}</td>
                    <td>${element.auther}</td>
                    <td>${element.type}</td>
                    <td>${element.issue_date}</td>
@@ -59,6 +59,24 @@ function return_book(index) {
   bookObj.splice(index, 1);
   localStorage.setItem("Entry", JSON.stringify(bookObj));
   ShowBook();
+}
+
+//function to search
+function search_Book(value) {
+  let searchVal = value.toLowerCase().trim();
+  let bookNames = document.getElementsByClassName("searchBookName");
+
+  Array.from(bookNames).forEach((book) => {
+    let td = book;
+    let bookName = td.innerHTML.toLowerCase().trim();
+    let tr = td.parentElement;
+
+    if (bookName.indexOf(searchVal) >= 0) {
+      tr.style.display = "table-row";
+    } else {
+      tr.style.display = "none";
+    }
+  });
 }
 
 class Display {
